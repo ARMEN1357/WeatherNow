@@ -1,7 +1,7 @@
 function Get_weather() {
     const city = document.getElementById("input_search").value;
     const API = "bdde7694cfce2e5c7fa6e3a8e5f755e5";
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API}&lang=ru`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API}&lang=ru`;
 
 
     let temperature = document.getElementById("temperature");
@@ -131,7 +131,7 @@ function Get_weather() {
                     icon_main.src = '';
             }
 
-            temperature.textContent = `${Math.round(data.main.temp - 273.15)}°C`;
+            temperature.textContent = `${parseInt(data.main.temp)}°C`;
             city_name.textContent = `${data.name}, ${data.sys.country}`;
             description.textContent = `${data.weather[0].description}`;
             humidity.textContent = `${data.main.humidity}%`;
@@ -144,7 +144,7 @@ function Get_weather() {
             const lon = `${data.coord.lon}`
             const lat = `${data.coord.lat}`
 
-            const url_2 = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API}&lang=ru`
+            const url_2 = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API}&lang=ru`
             fetch(url_2)
                 .then(response => response.json())
                 .then(data => {
@@ -153,36 +153,36 @@ function Get_weather() {
                         return;
                     }
         
-                    temp1.textContent = `${Math.round(data.list[1].main.temp - 273.15)}°C`
-                    temp2.textContent = `${Math.round(data.list[2].main.temp - 273.15)}°C`
-                    temp3.textContent = `${Math.round(data.list[3].main.temp - 273.15)}°C`
-                    temp4.textContent = `${Math.round(data.list[4].main.temp - 273.15)}°C`
-                    temp5.textContent = `${Math.round(data.list[5].main.temp - 273.15)}°C`
-                    temp6.textContent = `${Math.round(data.list[6].main.temp - 273.15)}°C`
-                    temp7.textContent = `${Math.round(data.list[7].main.temp - 273.15)}°C`
-                    temp8.textContent = `${Math.round(data.list[8].main.temp - 273.15)}°C`
-                    temp9.textContent = `${Math.round(data.list[9].main.temp - 273.15)}°C`
-                    temp10.textContent = `${Math.round(data.list[10].main.temp - 273.15)}°C`
-                    temp11.textContent = `${Math.round(data.list[11].main.temp - 273.15)}°C`
-                    temp12.textContent = `${Math.round(data.list[12].main.temp - 273.15)}°C`
-                    temp13.textContent = `${Math.round(data.list[13].main.temp - 273.15)}°C`
-                    temp14.textContent = `${Math.round(data.list[14].main.temp - 273.15)}°C`
-                    temp15.textContent = `${Math.round(data.list[15].main.temp - 273.15)}°C`
-                    temp16.textContent = `${Math.round(data.list[16].main.temp - 273.15)}°C`
-                    temp17.textContent = `${Math.round(data.list[17].main.temp - 273.15)}°C`
-                    temp18.textContent = `${Math.round(data.list[18].main.temp - 273.15)}°C`
-                    temp19.textContent = `${Math.round(data.list[19].main.temp - 273.15)}°C`
-                    temp20.textContent = `${Math.round(data.list[20].main.temp - 273.15)}°C`
-                    temp21.textContent = `${Math.round(data.list[21].main.temp - 273.15)}°C`
-                    temp22.textContent = `${Math.round(data.list[22].main.temp - 273.15)}°C`
-                    temp23.textContent = `${Math.round(data.list[23].main.temp - 273.15)}°C`
-                    temp24.textContent = `${Math.round(data.list[24].main.temp - 273.15)}°C`
-                    temp25.textContent = `${Math.round(data.list[25].main.temp - 273.15)}°C`
-                    temp26.textContent = `${Math.round(data.list[26].main.temp - 273.15)}°C`
-                    temp27.textContent = `${Math.round(data.list[27].main.temp - 273.15)}°C`
-                    temp28.textContent = `${Math.round(data.list[28].main.temp - 273.15)}°C`
-                    temp29.textContent = `${Math.round(data.list[29].main.temp - 273.15)}°C`
-                    temp30.textContent = `${Math.round(data.list[30].main.temp - 273.15)}°C`
+                                       temp1.textContent = `${parseInt(data.list[1].main.temp)}°C`
+                    temp2.textContent = `${parseInt(data.list[2].main.temp)}°C`
+                    temp3.textContent = `${parseInt(data.list[3].main.temp)}°C`
+                    temp4.textContent = `${parseInt(data.list[4].main.temp)}°C`
+                    temp5.textContent = `${parseInt(data.list[5].main.temp)}°C`
+                    temp6.textContent = `${parseInt(data.list[6].main.temp)}°C`
+                    temp7.textContent = `${parseInt(data.list[7].main.temp)}°C`
+                    temp8.textContent = `${parseInt(data.list[8].main.temp)}°C`
+                    temp9.textContent = `${parseInt(data.list[9].main.temp)}°C`
+                    temp10.textContent = `${parseInt(data.list[10].main.temp)}°C`
+                    temp11.textContent = `${parseInt(data.list[11].main.temp)}°C`
+                    temp12.textContent = `${parseInt(data.list[12].main.temp)}°C`
+                    temp13.textContent = `${parseInt(data.list[13].main.temp)}°C`
+                    temp14.textContent = `${parseInt(data.list[14].main.temp)}°C`
+                    temp15.textContent = `${parseInt(data.list[15].main.temp)}°C`
+                    temp16.textContent = `${parseInt(data.list[16].main.temp)}°C`
+                    temp17.textContent = `${parseInt(data.list[17].main.temp)}°C`
+                    temp18.textContent = `${parseInt(data.list[18].main.temp)}°C`
+                    temp19.textContent = `${parseInt(data.list[19].main.temp)}°C`
+                    temp20.textContent = `${parseInt(data.list[20].main.temp)}°C`
+                    temp21.textContent = `${parseInt(data.list[21].main.temp)}°C`
+                    temp22.textContent = `${parseInt(data.list[22].main.temp)}°C`
+                    temp23.textContent = `${parseInt(data.list[23].main.temp)}°C`
+                    temp24.textContent = `${parseInt(data.list[24].main.temp)}°C`
+                    temp25.textContent = `${parseInt(data.list[25].main.temp)}°C`
+                    temp26.textContent = `${parseInt(data.list[26].main.temp)}°C`
+                    temp27.textContent = `${parseInt(data.list[27].main.temp)}°C`
+                    temp28.textContent = `${parseInt(data.list[28].main.temp)}°C`
+                    temp29.textContent = `${parseInt(data.list[29].main.temp)}°C`
+                    temp30.textContent = `${parseInt(data.list[30].main.temp)}°C`
 
                     icon1.src = `http://openweathermap.org/img/w/${data.list[1].weather[0].icon}.png`
                     icon2.src = `http://openweathermap.org/img/w/${data.list[2].weather[0].icon}.png`
@@ -245,16 +245,6 @@ function Get_weather() {
                     date28.textContent = `${data.list[28].dt_txt}`
                     date29.textContent = `${data.list[29].dt_txt}`
                     date30.textContent = `${data.list[30].dt_txt}`
-                    // date36.textContent = `${data.list[36].dt_txt}`
-                    // date37.textContent = `${data.list[37].dt_txt}`
-                    // date38.textContent = `${data.list[38].dt_txt}`
-                    // date39.textContent = `${data.list[39].dt_txt}`
-                    // date40.textContent = `${data.list[40].dt_txt}`
-                    // date1.textContent = `${data.list[1].dt_txt}`
-                    // date2.textContent = `${data.list[9].dt_txt}`
-                    // date3.textContent = `${data.list[17].dt_txt}`
-                    // date4.textContent = `${data.list[25].dt_txt}`
-                    // date5.textContent = `${data.list[33].dt_txt}`
         
                 })
         })
