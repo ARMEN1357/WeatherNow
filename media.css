@@ -1,0 +1,110 @@
+@media (max-width: 1300px) {
+    .main .hourly-forecast {
+        width: 700px;
+    }
+
+    .main .hourly-forecast .moments {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main .on_week {
+        margin: 20px 0px;
+    }
+
+    .main .on_week .days {
+        width: 600px;
+    }
+
+}
+
+@media (max-width: 1060px) {
+    .main .hourly-forecast .moments {
+        grid-template-columns: 1fr;
+    }
+
+    .main .on_week .days {
+        width: 450px;
+    }
+}
+
+@media (max-width: 898px) {
+    body{
+        width: 100%;
+    }
+
+    .header {
+        display: block;
+        text-align: center;
+        height: 100px;
+        padding: 5px;
+    } 
+
+    .header nav {
+        margin: 20px 0px;
+    }
+
+    .main {
+        display: block;
+        margin: 20px 0px;
+    }
+
+    .main .location {
+        margin: 10px auto;
+    }
+
+    .main .hourly-forecast {
+        width: 370px;  
+        margin: auto;
+    }
+
+    .main .hourly-forecast h2 {
+        text-align: center;
+    }
+
+    .main .hourly-forecast .moments .item{
+        margin: auto;
+    }
+
+    .main .on_week {
+        margin: auto;
+    }
+
+    .main .on_week .days {
+        width: 370px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 427px){
+    .main .location {
+        height: 550px;
+        width: 320px;
+    }
+}
+
+@media (max-width: 379px){
+    .main .location {
+        height: 530px;
+        width: 250px;
+    }
+
+    .main .location .up_weather {
+        height: 450px;
+    }
+
+    .main .hourly-forecast {
+        width: 250px;
+    }
+
+    .main .hourly-forecast .moments .item{
+        width: 230px;
+    }
+
+    .main .location .up_weather .input input {
+        width: 230px;
+    }
+
+    .main .on_week .days {
+        width: 250px;
+    }
+}

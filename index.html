@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/облачно.png" type="image/x-icon">
+    <link rel="stylesheet" href="media.css">
+    <title>Главная</title>
+</head>
+<body>
+    <div class="header">
+        <h1>WeatherNow</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="about.html">О проекте</a>
+        </nav>
+    </div>
+    <div class="main">
+        <div class="location">
+            <div class="up_weather">
+                <div class="input">
+                    <input type="search" id="input_search">
+                    <img src="img/search.webp" alt="поиск" onclick="Get_weather()">
+                </div>
+                <p class="main_img"><img src="img/облачно.png" alt="значок" id="icon_main"></p>
+                <h2 id="temperature"></h2>
+                <p id="description"></p>
+            </div>
+            <div class="down_weather">
+                <p>Сейчас</p>
+                <p id="city_name"></p>
+            </div>
+        </div>
+        <div class="hourly-forecast">
+            <h2>Основные моменты</h2>
+            <div class="moments">
+                <div class="item">
+                    <p class="name">Влажность</p>
+                    <p class="value" id="humidity"></p>
+                </div>
+                <div class="item">
+                    <p class="name">Восход</p>
+                    <p class="value" id="sunrise"></p>
+                </div>
+                <div class="item">
+                    <p class="name">Заход солнца</p>
+                    <p class="value" id="sunset"></p>
+                </div>
+                <div class="item">
+                    <p class="name">Скорость ветра</p>
+                    <p class="value" id="speed"></p>
+                </div>
+                <div class="item">
+                    <p class="name">Облачность</p>
+                    <p class="value" id="clouds-all"></p>
+                </div>
+                <div class="item">
+                    <p class="name">Видимость</p>
+                    <p class="value" id="visibility"></p>
+                </div>
+            </div>
+            <div class="on_week">
+                <h2>На 4 дня</h2>
+                <div class="days" id="days">
+                    <div class="day">
+                        <p class="date" id="date1"></p>
+                        <p class="icon"><img src="img/облачно.png" alt="" id="icon1"></p>
+                        <p class="temp" id="temp1"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date2"></p>
+                        <p class="icon"><img src="img/дождливо.png" alt="" id="icon2"></p>
+                        <p class="temp" id="temp2"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date3"></p>
+                        <p class="icon"><img src="img/снег и гроза.png" alt="" id="icon3"></p>
+                        <p class="temp" id="temp3"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date4"></p>
+                        <p class="icon"><img src="img/снег и гроза.png" alt="" id="icon4"></p>
+                        <p class="temp" id="temp4"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date5"></p>
+                        <p class="icon"><img src="img/солнечно.png" alt="" id="icon5"></p>
+                        <p class="temp" id="temp5"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date6"></p>
+                        <p class="icon"><img src="img/облачно.png" alt="" id="icon6"></p>
+                        <p class="temp" id="temp6"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date7"></p>
+                        <p class="icon"><img src="img/дождливо.png" alt="" id="icon7"></p>
+                        <p class="temp" id="temp7"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date8"></p>
+                        <p class="icon"><img src="img/снег и гроза.png" alt="" id="icon8"></p>
+                        <p class="temp" id="temp8"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date9"></p>
+                        <p class="icon"><img src="img/снег и гроза.png" alt="" id="icon9"></p>
+                        <p class="temp" id="temp9"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date10"></p>
+                        <p class="icon"><img src="img/солнечно.png" alt="" id="icon10"></p>
+                        <p class="temp" id="temp10"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date11"></p>
+                        <p class="icon"><img src="img/облачно.png" alt="" id="icon11"></p>
+                        <p class="temp" id="temp11"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date12"></p>
+                        <p class="icon"><img src="img/дождливо.png" alt="" id="icon12"></p>
+                        <p class="temp" id="temp12"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date13"></p>
+                        <p class="icon"><img src="img/снег и гроза.png" alt="" id="icon13"></p>
+                        <p class="temp" id="temp13"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date14"></p>
+                        <p class="icon"><img src="img/снег и гроза.png" alt="" id="icon14"></p>
+                        <p class="temp" id="temp14"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date15"></p>
+                        <p class="icon"><img src="img/солнечно.png" alt="" id="icon15"></p>
+                        <p class="temp" id="temp15"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date16"></p>
+                        <p class="icon"><img src="img/облачно.png" alt="" id="icon16"></p>
+                        <p class="temp" id="temp16"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date17"></p>
+                        <p class="icon"><img src="img/дождливо.png" alt="" id="icon17"></p>
+                        <p class="temp" id="temp17"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date18"></p>
+                        <p class="icon"><img src="img/снег и гроза.png" alt="" id="icon18"></p>
+                        <p class="temp" id="temp18"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date19"></p>
+                        <p class="icon"><img src="img/снег и гроза.png" alt="" id="icon19"></p>
+                        <p class="temp" id="temp19"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date20"></p>
+                        <p class="icon"><img src="img/солнечно.png" alt="" id="icon20"></p>
+                        <p class="temp" id="temp20"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date21"></p>
+                        <p class="icon"><img src="img/облачно.png" alt="" id="icon21"></p>
+                        <p class="temp" id="temp21"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date22"></p>
+                        <p class="icon"><img src="img/дождливо.png" alt="" id="icon22"></p>
+                        <p class="temp" id="temp22"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date23"></p>
+                        <p class="icon"><img src="img/снег и гроза.png" alt="" id="icon23"></p>
+                        <p class="temp" id="temp23"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date24"></p>
+                        <p class="icon"><img src="img/снег и гроза.png" alt="" id="icon24"></p>
+                        <p class="temp" id="temp24"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date25"></p>
+                        <p class="icon"><img src="img/солнечно.png" alt="" id="icon25"></p>
+                        <p class="temp" id="temp25"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date26"></p>
+                        <p class="icon"><img src="img/облачно.png" alt="" id="icon26"></p>
+                        <p class="temp" id="temp26"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date27"></p>
+                        <p class="icon"><img src="img/дождливо.png" alt="" id="icon27"></p>
+                        <p class="temp" id="temp27"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date28"></p>
+                        <p class="icon"><img src="img/снег и гроза.png" alt="" id="icon28"></p>
+                        <p class="temp" id="temp28"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date29"></p>
+                        <p class="icon"><img src="img/снег и гроза.png" alt="" id="icon29"></p>
+                        <p class="temp" id="temp29"></p>
+                    </div>
+                    <div class="day">
+                        <p class="date" id="date30"></p>
+                        <p class="icon"><img src="img/солнечно.png" alt="" id="icon30"></p>
+                        <p class="temp" id="temp30"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

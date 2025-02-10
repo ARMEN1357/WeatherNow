@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #06283D;
+}
+
+.header {
+    background-color: rgba(104, 104, 104, 0.2); 
+    padding: 0px 50px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    height: 82px;
+}
+
+.header h1 {
+    color: white;
+    font-size: 35px;
+}
+
+.header nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    margin: 0px 20px;
+}
+
+.header a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white; 
+}
+
+.main {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 20px 50px;
+    gap: 30px;
+}
+
+.main .location {
+    background-color: rgba(104, 104, 104, 0.2); 
+    height: 580px;
+    border-radius: 10px;
+    width: 370px;
+    padding: 20px;
+}
+
+.main .location .up_weather {
+    border-bottom: 1px solid white;
+    height: 430px;
+}
+
+.main .location .up_weather .input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.main .location .up_weather .input input {
+    border: none;
+    height: 40px;
+    width: 350px;
+    font-size: 23px;
+}
+
+.main .location .up_weather .input img {
+    height: 40px;
+    width: 40px;
+}
+
+.main .location .up_weather .main_img {
+    text-align: center;
+}
+
+.main .location .up_weather .main_img img {
+    height: 250px;
+    width: 250px;
+}
+
+.main .location .up_weather h2{
+    margin: 10px 0px;
+    font-size: 50px;
+    color: white;
+}
+
+.main .location .up_weather p {
+    margin: 10px 0px;
+    color: white;
+    font-size: 25px;
+}
+
+.main .location .down_weather p{
+    margin: 10px 0px;
+    color: white;
+    font-size: 23px;
+}
+
+.main .hourly-forecast {
+    height: 605px;
+    width: 1000px;
+}
+
+.main .hourly-forecast h2{
+    font-size: 40px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.main .hourly-forecast .moments {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.main .hourly-forecast .moments .item {
+    height: 100px;
+    width: 300px;
+    border-radius: 10px;
+    padding-top: 38px;
+    background-color: rgba(104, 104, 104, 0.2); 
+}
+
+
+.main .hourly-forecast .moments .name, .value {
+    font-size: 27px;
+    color: white;
+    text-align: center;
+}
+
+.main .on_week .days {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    width: 970px;
+}
+
+.main .on_week .days .day {
+    background-color: rgba(104, 104, 104, 0.2);
+    height: 170px;
+    min-width: 132px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.main .on_week .days .date {
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.main .on_week .days .icon {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.main .on_week .days .temp {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.main .on_week .days .day .icon img {
+    height: 50px;
+    width: 50px;
+}

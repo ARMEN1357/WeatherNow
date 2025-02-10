@@ -1,0 +1,12 @@
+.about h1 {
+    margin: 25px;
+    font-size: 64px;
+    color: white;
+    text-align: center;
+}
+
+.about p {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
